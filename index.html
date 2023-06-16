@@ -1,42 +1,65 @@
 <html>
+
 <head>
   <style>
-      .button {
-        background-color: #d2e94e;
-        /* Green */
-        border: none;
-        color: #000000, 0, 0;
-        padding: 5px 12px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 5px;
-        margin: 4px 2px;
-        cursor: pointer;
-        -webkit-transition-duration: 0.2s;
-        /* Safari */
-        transition-duration: 0.2s;
-      }
+    .button {
+      background-color: #39a6ad;
+      border: none;
+      color: #ffffff;
+      padding: 5px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+    }
 
-      .button1:hover {
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-      }
-    </style>
+    .button:hover {
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
 </head>
-<body style="background-color:#E0EEEE;">
-  
-<center>
-  <h1>adexlml的音游主页</h1>
-  <td>
-  <ol>adexlml的优选视频</ol>
-  </td>
-  <td>
-  <ol>adexlml的Malody铺面</ol>
-  </td>
-</center>
- 
- <a href="https://space.bilibili.com/1704506158?spm_id_from=333.1007.0.0"> <button class="button button1">关于adexlml</button></a>
 
+<body style="background-color:#8bc0c0;">
+  <center>
+    <h1>adexlml的音游主页</h1>
+    <script>
+      Date.prototype.format = function (fmt) {
+        var o = {
+          "y+": this.getFullYear, //年
+          "M+": this.getMonth() + 1, //月份
+          "d+": this.getDate(), //日
+          "h+": this.getHours(), //小时
+          "m+": this.getMinutes(), //分
+          "s+": this.getSeconds() //秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+          if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+      }
+      setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+    </script>
+
+    <div id="dateTime"></div>
+    </div>
+    <table border="0">
+      <tr align="center">
+        <td align="center">
+          <ol><h2>adexlml的优选视频</h2></ol>
+        </td>
+        <td align="center">
+          <ol><h2>adexlml的Malody铺面</h2></ol>
+        </td>
+      </tr>
+    </table>
+    <a href="https://space.bilibili.com/1704506158?spm_id_from=333.1007.0.0">
+      <button class="button button1">关于adexlml</button>
+    </a>
+  </center>
 </body>
 
 </html>
